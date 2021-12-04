@@ -16,7 +16,7 @@ class ProductQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return \common\models\Products[]|array
+     * @return \common\models\Product[]|array
      */
     public function all($db = null)
     {
@@ -25,10 +25,18 @@ class ProductQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return \common\models\Products|array|null
+     * @return \common\models\Product|array|null
      */
     public function one($db = null)
     {
         return parent::one($db);
+    }
+
+    /**
+     * @return \common\models\query\ProductQuery
+     */
+    public function published()
+    {
+        return $this->andWhere(['status' => 1]);
     }
 }
