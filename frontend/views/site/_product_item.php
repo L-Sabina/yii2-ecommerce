@@ -24,7 +24,7 @@
     </div>
     <!-- Product actions-->
     <div class="card-footer text-right">
-        <a class="btn btn-primary" href="#">Add to cart</a>
+        <a class="btn btn-primary btn-add-to-cart" href="<?php echo \yii\helpers\Url::to(['/cart/add']) ?>">Add to cart</a>
     </div>
 
 </div>
